@@ -1,5 +1,5 @@
 const birdsRepo = require('./bird.memory.repository');
 
-const getAll = () => birdsRepo.getAll();
+const getAll = (levels, answers) => birdsRepo.getAll(levels, answers);
 
 module.exports = { getAll };
