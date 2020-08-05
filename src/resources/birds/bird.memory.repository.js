@@ -330,7 +330,7 @@ const birds = [
 ];
 
 const getAll = async (levels, answers) => {
-  const data = _.chain(training).concat(birds).shuffle().take(levels).value();
+  const data = training.concat(_.chain(birds).shuffle().take(levels).value());
   return data.map(level => ({ ...level, answers: _.chain(level.answers).shuffle().take(answers).value() }));
 };
 
