@@ -6,7 +6,7 @@ router.route('/').get(async (req, res) => {
   let answers = Number(req.query.answers) || 6;
 
   const birds = await birdsService.getAll(levels, answers);
-  setTimeout(() => res.json(birds), 2000);
+  setTimeout(() => res.json(birds), 1000);
 });
 
 module.exports = router;
